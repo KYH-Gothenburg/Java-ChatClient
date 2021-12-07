@@ -20,14 +20,16 @@ public class Main {
             // We store the user input in inData
             String inData;
             do {
-                // Get user input
+                // Get user input BLOCKING
+                // TODO: Lägg i en egen tråd
                 inData = in.next();
                 // Send the suer input to the server
                 output.println(inData);
 
                 // We will only receive data from the server if we have sent something other than exit
                 if(!inData.equals("exit")) {
-                    // Get data from server
+                    // Get data from server BLOCKING
+                    // TODO: Lägg i en egen tråd
                     String message = input.readLine();
                     // and print it
                     System.out.println(message);
